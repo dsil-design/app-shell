@@ -14,7 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} font-geist-sans text-sm antialiased`}>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} font-geist-sans text-sm antialiased`} suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }
